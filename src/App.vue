@@ -11,13 +11,7 @@
                   v-on:deleteUserEvent="handleDeleteUser"/>
           <comp-footer v-bind:title="title"/>
           <demo-ref/>
-          <demo-slot>
-              <div class="app-slot">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam blanditiis delectus
-                  exercitationem labore libero quasi, quia saepe. Alias commodi debitis ea excepturi fugit
-                  libero, odio quia quidem ratione ullam.
-              </div>
-          </demo-slot>
+          <demo-slot/>
 
       </div>
   </div>
@@ -39,6 +33,7 @@
     import listUser from './components/listUser';
     import demoRef from "./components/demoRef";
     import demoSlot from "./components/demoSlot";
+    // import compTabs from "./components/compTabs"
 
 export default {
   name: 'app',
@@ -81,7 +76,8 @@ export default {
       compHeader,
       listUser,
       demoRef,
-      demoSlot
+      demoSlot,
+      // compTabs
   }
 }
 </script>
