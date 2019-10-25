@@ -15,7 +15,7 @@
             }
         },
         methods: {
-            changeTitleHeader: function (e) {
+            changeTitleHeader(e){
                 console.log('Trước khi kích hoạt changeTitleEvent');
 
                 const data = {

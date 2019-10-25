@@ -12,7 +12,13 @@
           <comp-footer v-bind:title="title"/>
           <demo-ref/>
           <demo-slot/>
-
+          <!--<router-view/>-->
+          <br>
+          <other/>
+          <br>
+          <app-result/>
+          <br>
+          <app-counter/>
       </div>
   </div>
 
@@ -33,6 +39,10 @@
     import listUser from './components/listUser';
     import demoRef from "./components/demoRef";
     import demoSlot from "./components/demoSlot";
+    import other from "./components/Other"
+    import AppCounter from "./components/Counter"
+    import AppResult from "./components/Result"
+    // import vueResource from "./components/vueResource"
     // import compTabs from "./components/compTabs"
 
 export default {
@@ -48,8 +58,10 @@ export default {
             { id:104, email:'tienanh4@gmail.com',active:false },
             { id:105, email:'tienanh5@gmail.com',active:true },
             { id:106, email:'tienanh6@gmail.com',active:true },
-        ]
+        ],
+        resource:{}
     }
+
   },
     methods:{
         handleChangeTitle(data){
@@ -69,7 +81,8 @@ export default {
                 this.listUser.splice(indexDelete,1);
             }
             // console.log('handleDeleteUser trong app.vue', data)
-        }
+        },
+
     },
   components:{
       compFooter,
@@ -77,6 +90,10 @@ export default {
       listUser,
       demoRef,
       demoSlot,
+      other,
+      AppCounter,
+      AppResult
+      // vueResource,
       // compTabs
   }
 }
